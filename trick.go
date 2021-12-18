@@ -32,8 +32,5 @@ func normalize(s, t card.Suit) func(card.Card) int {
 }
 
 func aceHigh(r card.Rank) int {
-	if r == card.Ace {
-		return 12
-	}
-	return int(r) - 1
+	return (int(r) + 12) % 13
 }
